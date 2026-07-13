@@ -1,8 +1,10 @@
 import mongoose from "mongoose";
+const dns = require("dns")
+dns.setServers(["8.8.8.8","8.8.4.4"])
 
 const connectDB = async () => {
   try {
-    await mongoose.connect(process.env.MONGO_URI);
+    await mongoose.connect("mongodb+srv://suryaneerukonda24_db_user:<db_password>@cluster0.dswlf2o.mongodb.net/bhargavAppname=cluster0");
 
     console.log("✅ MongoDB Connected Successfully");
   } catch (error) {
